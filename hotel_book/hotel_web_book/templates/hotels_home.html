@@ -1,0 +1,97 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+    <link rel="stylesheet" href="{% static 'foundation.css' %}">
+    <link rel="stylesheet" href="{% static 'normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'images' %}">
+    <link rel="stylesheet" href="{% static 'hotel_home.css' %}">
+
+</head>
+<body>
+    <h1>Hotels List </h1>
+
+    <form action="/hotel_price_home" method="post">{% csrf_token %}
+        <div>
+            <ul class="no-bullet">
+                <div class="row">
+                    <div class="test-box1 small-6 columns">
+                        <li><img src="{% static 'images/hotel1.jpg' %}"></li>
+                    </div>
+                    <div class="small-6 columns">
+                         <div class="row">
+                            <p>PRICE RS:4500/day</p>
+                        </div>
+                        <input type="hidden" value="4500 " name="price" readonly>
+                        <div class="row">
+                        <input type="submit" class="button" value="BOOK NOW">
+                        </div>
+                    </div>
+                </div>
+             </ul>
+            </div>
+    </form>
+    <form action="/hotel_price_home" method="post">{% csrf_token %}
+             <ul class="no-bullet">
+                <div class="row">
+                    <div class="test-box1 small-6 columns">
+                        <li><img src="{% static 'images/hotel-2.jpg' %}"></li>
+                    </div>
+                    <div class="small-6 columns">
+                        <div class="row">
+                            <p>PRICE RS:3500/day</p>
+                        </div>
+                        <input type="hidden" value="3500 " name="price" readonly>
+                        <div class="row">
+                            <input type="submit" class="button" value="BOOK NOW">
+                        </div>
+                    </div>
+                    </div>
+             </ul>
+
+    </form>
+    <form action="/hotel_price_home" method="post">{% csrf_token %}
+
+             <ul class="no-bullet">
+                <div class="row">
+                    <div class="test-box1 small-6 columns">
+                        <li><img src="{% static 'images/hotel-3.jpg' %}"></li>
+                    </div>
+                    <div class="small-6 columns">
+                        <div class="row">
+                            <p>PRICE RS:3000/day</p>
+                        </div>
+                        <input type="hidden" value="3000 " name="price" readonly>
+                        <div class="row">
+                        <input type="submit" class="button" value="BOOK NOW">
+                        </div>
+                    </div>
+                </div>
+             </ul>
+
+    </form>
+    <form action="/hotel_price_home" method="post">{% csrf_token %}
+             <ul class="no-bullet">
+                <div class="row">
+                    <div class="test-box1 small-6 columns">
+                        <li><img src="{% static 'images/hotel-4.jpg' %}"></li>
+                    </div>
+                    <div class="small-6 columns">
+                         <div class="row">
+                            <p>PRICE RS:2500/day</p>
+                        </div>
+                        <input type="hidden" value="2500 " name="price" readonly>
+                        <div class="row">
+                        <input type="submit" class="button" value="BOOK NOW">
+                        </div>
+                    </div>
+                </div>
+
+
+            </ul>
+    </form>
+
+</body>
+</html>

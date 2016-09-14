@@ -1,0 +1,50 @@
+
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Price</title>
+     <link rel="stylesheet" href="{% static 'foundation.css' %}">
+    <link rel="stylesheet" href="{% static 'normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'images' %}">
+    <link rel="stylesheet" href="{% static 'hotel_home.css' %}">
+</head>
+<body>
+    <h1> Select the fields below</h1>
+
+    <form action="/hotel_price" method="post">{% csrf_token %}
+    <div class="row">
+        <div class="small-6 columns">
+            <ul class="no-bullet">
+                <li>
+                    <label>
+                        Enter number of days to stay:
+                        <input id="num_days" type="number" name="days" value="1">
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        Enter number of rooms you want:
+                        <input id="num_rooms" type="number" name="rooms" value="1">
+                    </label>
+                </li>
+            </ul>
+            <input type="submit" class="button" value="submit">
+        </div>
+        <div class="small-6 columns">
+
+        <p id="msg_add" style="color:red;"></p>
+        </div>
+
+    </div>
+</form>
+    <script type="text/javascript" src="{% static 'js/jquery-3.1.0.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'hotels_price.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/vendor/fastclick.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/foundation.min.js' %}"></script>
+    <script>
+        $(document).foundation();
+    </script>
+</body>
+</html>
